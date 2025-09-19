@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-t3orst9=trw5r95(1p^^ms)9f@=l#vb0u*8o)74_gt=6okw$!!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = str(os.environ.get("DJANGO_DEBUG")).lower()=="true" 
 
 ALLOWED_HOSTS = [
-    ".railway.app"
+    ".railway.app" #saas-foundation-project-production.up.railway.app
 ]
 
 if DEBUG:
