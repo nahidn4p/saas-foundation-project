@@ -147,9 +147,8 @@ STATICFILES_BASE_DIR.mkdir(exist_ok=True,parents=True)
 STATICFILES_VENDOR_DIR= STATICFILES_BASE_DIR / "vendors"
 
 #source(s) for python manage.py collecstatic
-STATICFILES_DIR=[
+STATICFILES_DIRS=[
     STATICFILES_BASE_DIR,
-    STATICFILES_VENDOR_DIR
 ]
 
 #output for python manage.py collectstatic
